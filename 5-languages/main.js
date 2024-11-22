@@ -1,4 +1,4 @@
-let getYourLang = String(prompt('Введите ваш язык из списка: ru, de, en, fr, ua'));
+let getYourLang = prompt('Введите ваш язык из списка: ru, de, en, fr, ua').toLowerCase();
 
 switch (getYourLang) {
   case 'ru':
