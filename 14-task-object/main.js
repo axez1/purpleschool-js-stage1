@@ -1,13 +1,15 @@
+const getUniqId = () => {
+  let id = 1;
+  return () => id++;
+}
+
 const ToDoList = {
 
   tasks: [],
 
-  getUniqId: () => {
-    let id = 1;
-    return () => id++;
-  },
+  lastId: getUniqId(),
 
-  addTask(title, priority, id = ToDoList.getUniqId()) {
+  addTask(title, priority, id = this.lastId()) {
     this.tasks.push({ title, priority, id });
   },
 
